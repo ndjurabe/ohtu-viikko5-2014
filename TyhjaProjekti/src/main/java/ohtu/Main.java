@@ -32,9 +32,15 @@ public class Main {
         Submission[] subs = mapper.fromJson(bodyText, Submission[].class);
 
         System.out.println("Opiskelija "+studentNr);
+        int sumOfAlltheExercises = 0;
+        int totalhours = 0;
         for (Submission submission : subs) {
+           
             System.out.println("  " +submission);
+        sumOfAlltheExercises+=submission.totalDoneEx();
+        totalhours+=submission.getHours();
         }
+        System.out.println("Total amount of points so far is " + sumOfAlltheExercises+" and total amount of time spent is " +totalhours+" hours");
 
     }
 }

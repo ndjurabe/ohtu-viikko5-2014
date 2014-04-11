@@ -76,7 +76,9 @@ public class Submission {
         return sumOfExercises;
     }
     
-
+public int getHours(){
+    return hours;
+}
 
     @Override
     public String toString() {
